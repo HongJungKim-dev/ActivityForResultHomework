@@ -5,20 +5,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SubActivity extends AppCompatActivity {
     static final int GET_STRING=1;   //요청코드
     EditText edit;   //1차로 받을 입력
-    EditText edit2;   //2차로 받을 입력
+    TextView edit2;   //2차로 받을 입력
 
     public void onCreate(Bundle savedInstanceState) {   //레이아웃 생성
         super.onCreate(savedInstanceState);   //초기 컴포넌트 초기화
         setContentView(R.layout.sub);   //화면에 나타날 view가 담긴 xml파일을 불러와서 액티비티 설정
 
         edit = (EditText) findViewById(R.id.edit);   //edit EditText 아이디 저장
-        edit2 = (EditText) findViewById(R.id.edit2);   //edit2 EditText 아이디 저장
+        edit2 = (TextView) findViewById(R.id.edit2);   //edit2 TextView 아이디 저장
         Button button_ok = (Button) findViewById(R.id.button_ok);   //2차 데이터입력 버튼 아이디 저장
         Button button_ok2 = (Button) findViewById(R.id.button_ok2);  //입력완료 버튼 아이디 저장
         button_ok.setOnClickListener(new View.OnClickListener() {
